@@ -1,8 +1,14 @@
 const App = require('../app.js');
-var readBook = App.selectBook;
+var readBook = App.readBook;
+var removePunct = App.removePunct;
 
 describe("Book", () =>{
-    it("can output the content of a .txt file", () => {
+    it("can output the contents of a book", () => {
         expect(readBook('/Users/frederickofori/Documents/TechTests/Word-Count/test.txt')).toEqual('This test works.');
+    });
+
+    it("can remove all punctuation from the book", function(){
+        var sampleBook = "This! t^est&* isn't isn't wor-king?"
+        expect(removePunct(sampleBook)).toEqual("This test isnt isnt working");
     });
 });
