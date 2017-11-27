@@ -16,9 +16,16 @@ var removeSpaces = function(book){
     return book.replace(/\s{2,}/g," ");
 }
 
+var removeDup = function(array){
+    return array.filter(function(curr, index, arr) {
+        return index == arr.indexOf(curr);
+    })
+};
+
 module.exports = {
     readBook,
     removePunct,
     splitWords,
-    removeSpaces
+    removeSpaces,
+    removeDup
 };
