@@ -17,7 +17,7 @@ var splitWords = function(book){
 };
 
 var removeSpaces = function(book){
-    return book.replace(/\s{2,}/g," ");
+    return book.replace(/\r?\n|\r/g," ");
 }
 
 var removeDup = function(array){
