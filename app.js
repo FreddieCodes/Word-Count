@@ -12,8 +12,13 @@ var splitWords = function(book){
     return book.split(" ");
 };
 
+var removeSpaces = function(book){
+    return book.replace(/\s{2,}/g," ");
+}
+
 module.exports = {
     readBook,
     removePunct,
-    splitWords
+    splitWords,
+    removeSpaces
 };
