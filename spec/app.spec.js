@@ -4,6 +4,7 @@ var removePunct = App.removePunct;
 var removeSpaces = App.removeSpaces;
 var splitWords = App.splitWords;
 var removeDup = App.removeDup;
+var removeCap = App.removeCap;
 
 describe("Book", function(){
     it("can output it's text contents", function(){
@@ -13,6 +14,11 @@ describe("Book", function(){
     it("can remove all punctuation", function(){
         var sampleBook = "This! t^est&* isn't isn't wor-king?";
         expect(removePunct(sampleBook)).toEqual("This test isnt isnt working");
+    });
+
+    it("can remove capitalisation", function(){
+        var sampleBook = "THIS test Is WorkING";
+        expect(removeCap(sampleBook)).toEqual("this test is working");
     });
 
     it("can remove line breaks", function(){

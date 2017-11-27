@@ -8,6 +8,10 @@ var removePunct = function(book){
     return book.replace(/[.,\/#!?@$'%\^&\*;:{}=\-_`~()]/g,"");
 };
 
+var removeCap = function(book){
+    return book.toLowerCase();
+};
+
 var splitWords = function(book){
     return book.split(" ");
 };
@@ -27,5 +31,6 @@ module.exports = {
     removePunct,
     splitWords,
     removeSpaces,
-    removeDup
+    removeDup,
+    removeCap
 };
