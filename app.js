@@ -6,9 +6,14 @@ var readBook = function(book){
 
 var removePunct = function(book){
     return book.replace(/[.,\/#!?@$'%\^&\*;:{}=\-_`~()]/g,"");
-}
+};
+
+var splitWords = function(book){
+    return book.split(" ");
+};
 
 module.exports = {
     readBook,
-    removePunct
+    removePunct,
+    splitWords
 };
