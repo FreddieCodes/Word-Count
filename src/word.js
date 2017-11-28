@@ -1,14 +1,14 @@
-var Word = function(name, number){
-    this.name = name;
-    this.number = number
+var Word = function(word, count){
+    this.word = word;
+    this.count = count
     this.prime = false;
 };
 
 Word.prototype.isPrime = function() {
-    if (this.number < 2) return false;
-    var sqrRt = Math.floor(Math.sqrt(this.number));
+    if (this.count < 2) return false;
+    var sqrRt = Math.floor(Math.sqrt(this.count));
     for(var i = 2; i <= sqrRt; i++) {
-        if(this.number % i === 0) {
+        if(this.count % i === 0) {
             this.prime = false;
             return false;
         }

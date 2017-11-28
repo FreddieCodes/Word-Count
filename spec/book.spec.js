@@ -41,11 +41,4 @@ describe("Book", function(){
         expect(book.wordsArray).toEqual(['This', 'test', 'isnt', 'working']);
     });
 
-    it("can create an array of arrays containing individual words with character count", function(){
-        book.wordsArray = ['this', 'test', 'isnt', 'this', 'isnt', 'working'];
-        book.content = 'this test isnt isnt isnt working'
-        book.countWords()
-        expect(book.wordsArray).toEqual([['this', 1], [ 'test', 1 ], [ 'isnt', 3 ], [ 'this', 1 ], [ 'isnt', 3 ], ['working', 1 ]])
-    });
-
 });

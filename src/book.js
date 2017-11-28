@@ -49,14 +49,12 @@ Book.prototype.countWords = function(){
     for (var i = 0; i < this.wordsArray.length; i++) {
         const element = this.wordsArray[i];
         var regexp = new RegExp(element, 'gi');
-            // var word = new Word(element, this.content.match(regexp).length)
-            var word = [element, this.content.match(regexp).length]
+            var word = new Word(element, this.content.match(regexp).length)
             newArr.push(word);
     }
     this.wordsArray = newArr;
     return newArr;
 };
-
 
 module.exports = {
    Book

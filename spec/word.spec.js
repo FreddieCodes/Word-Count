@@ -1,14 +1,14 @@
 const Word = require('../src/word.js').Word;
 
 describe("Word", function(){
-    it("has a name property", function(){
+    it("has a word property", function(){
         var word = new Word("test", 1)
-        expect(word.name).toBeDefined();
+        expect(word.word).toBeDefined();
     });
 
-    it("has a number property", function(){
+    it("has a count property", function(){
         var word = new Word("test", 1)
-        expect(word.number).toBeDefined();
+        expect(word.count).toBeDefined();
     });
 
     it("can calculate whether a number is a prime number", function(){
