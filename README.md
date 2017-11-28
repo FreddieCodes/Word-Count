@@ -1,5 +1,5 @@
 # Word-Count
-
+#### Version 1.0.0
 Word Counter allows you to load a book into the app and outputs all the individual words and the number of times they appear in the book.
 It also shows you if the word count for each individual item is a prime number.
 
