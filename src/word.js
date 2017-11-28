@@ -1,7 +1,7 @@
 var Word = function(name, number){
     this.name = name;
     this.number = number
-    this.prime;
+    this.prime = false;
 };
 
 Word.prototype.isPrime = function() {

@@ -1,4 +1,5 @@
 const Book = require('../src/book.js').Book;
+const Word = require('../src/word.js').Word;
 
 describe("Book", function(){
     var book;
@@ -38,6 +39,13 @@ describe("Book", function(){
         book.wordsArray = ['This', 'test', 'isnt', 'This', 'isnt', 'working'];
         book.removeDup();
         expect(book.wordsArray).toEqual(['This', 'test', 'isnt', 'working']);
+    });
+
+    it("can create an array of arrays containing individual words with character count", function(){
+        book.wordsArray = ['this', 'test', 'isnt', 'this', 'isnt', 'working'];
+        book.content = 'this test isnt isnt isnt working'
+        book.countWords()
+        expect(book.wordsArray).toEqual([['this', 1], [ 'test', 1 ], [ 'isnt', 3 ], [ 'this', 1 ], [ 'isnt', 3 ], ['working', 1 ]])
     });
 
 });
