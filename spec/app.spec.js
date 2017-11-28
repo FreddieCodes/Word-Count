@@ -1,9 +1,9 @@
-const Book = require('../app.js').Book;
+const Book = require('../src/book.js').Book;
 
 describe("Book", function(){
     var book;
     beforeEach(function() {
-        book = new Book()
+        book = new Book();
     });
 
     it("can output it's text contents", function(){
