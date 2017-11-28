@@ -11,31 +11,31 @@ Book.prototype.readBook = function(book){
     return bookString;
 };
 
-Book.prototype.removePunct = function(book){
-    var newString = book.replace(/[.,\/#!?@$'%\^&\*;:{}=\-_`~()]/g,"");
+Book.prototype.removePunct = function(){
+    var newString = this.content.replace(/[.,\/#!?@$'%\^&\*;:{}=\-_`~()]/g,"");
     this.content = newString;
     return newString;
 };
 
-Book.prototype.removeCap = function(book){
-    var newString = book.toLowerCase();
+Book.prototype.removeCap = function(){
+    var newString = this.content.toLowerCase();
     this.content = newString;
     return newString;
 };
 
-Book.prototype.removeSpaces = function(book){
-  var newString = book.replace(/\s{2,}/g," ").replace(/\r?\n|\r/g," ");
+Book.prototype.removeSpaces = function(){
+  var newString = this.content.replace(/\s{2,}/g," ").replace(/\r?\n|\r/g," ");
   this.content = newString;
   return newString;
 };
 
-Book.prototype.splitWords = function(book){
-    var arr = book.split(" ");
+Book.prototype.splitWords = function(){
+    var arr = this.content.split(" ");
     this.wordsArray = arr;
     return arr;
 };
 
-Book.prototype.removeDup = function(array){
+Book.prototype.removeDup = function(){
     var newArr = this.wordsArray.filter(function(curr, index, arr) {
         return index == arr.indexOf(curr);
     });
