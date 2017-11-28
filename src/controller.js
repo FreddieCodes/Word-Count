@@ -1,7 +1,5 @@
 // GLOBAL APP CONTROLLER
 const Book = require('./book.js').Book
-const Word = require('./word.js').Word
-
 
 var controller = (function(){
 

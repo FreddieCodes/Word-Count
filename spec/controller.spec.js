@@ -1,6 +1,4 @@
 const controller = require('../src/controller.js').controller;
-const Word = require('../src/word.js').Word;
-const Book = require('../src/book.js').Book;
 
 describe("Controller", function(){
     it("can output the word, number and if the number is a prime of each item in array", function(){
