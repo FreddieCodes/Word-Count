@@ -40,7 +40,7 @@ var controller = (function(){
     
 })(); 
 
-controller.init('bigtest.txt');
+// controller.init('bigtest.txt');
 
 module.exports = {
     controller
