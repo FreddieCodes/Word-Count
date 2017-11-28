@@ -5,7 +5,9 @@ var Word = function(name, number){
 };
 
 Word.prototype.isPrime = function() {
-    for(var i = 2; i < this.number; i++) {
+    if (this.number < 2) return false;
+    var sqrRt = Math.floor(Math.sqrt(this.number));
+    for(var i = 2; i <= sqrRt; i++) {
         if(this.number % i === 0) {
             this.prime = false;
             return false;
