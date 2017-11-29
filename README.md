@@ -90,7 +90,7 @@ All my functions have been tested using jasmine. I tried to be driven by testing
 
 - TDD used throughout
 - The app is fully functional and meets all specifications
-- Seperation of Responsibilities
+- DRY principles upheld
 
 
 ## Things to change

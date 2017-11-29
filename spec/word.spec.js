@@ -11,6 +11,12 @@ describe("Word", () => {
         expect(word.count).toBeDefined();
     });
 
+    it("has a prime property that defaults to false", () => {
+        const word = new Word("test", 1)
+        expect(word.prime).toBeDefined();
+        expect(word.prime).toEqual(false);
+    });
+
     it("can calculate whether a number is a prime number", () => {
         const word1 = new Word("test1", 7);
         const word2 = new Word("test2", 9);

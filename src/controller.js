@@ -14,7 +14,7 @@ const controller = (function(){
         const header = "Word | Count | Prime";
         for (let i = 0; i < arrayOfWords.length; i++) {
             const element = arrayOfWords[i];
-        string += `${element.word} | ${element.count} | ${element.prime}\n`
+        string += `${element.word} | ${element.count} | ${element.prime}\n`;
         }
         return `${header}\n${string}`;
     };
@@ -33,8 +33,7 @@ const controller = (function(){
             console.log(finalOutput);
             return finalOutput;
             }
-        };
-    
+        }; 
 })(); 
 
 module.exports = {
