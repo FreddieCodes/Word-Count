@@ -1,4 +1,3 @@
-// GLOBAL APP CONTROLLER
 const Book = require('./book.js').Book
 
 const controller = (function(){
@@ -37,8 +36,6 @@ const controller = (function(){
         };
     
 })(); 
-
-// controller.init('bigtest.txt');
 
 module.exports = {
     controller
