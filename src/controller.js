@@ -1,19 +1,19 @@
 // GLOBAL APP CONTROLLER
 const Book = require('./book.js').Book
 
-var controller = (function(){
+const controller = (function(){
 
-    var checkPrimes = function(arrayOfWords){
-        for (var i = 0; i < arrayOfWords.length; i++) {
+    const checkPrimes = function(arrayOfWords){
+        for (let i = 0; i < arrayOfWords.length; i++) {
             const element = arrayOfWords[i];
             element.isPrime();
         }
     };
 
-    var output = function(arrayOfWords){
-        var string = "";
-        var header = "Word | Count | Prime";
-        for (var i = 0; i < arrayOfWords.length; i++) {
+    const output = function(arrayOfWords){
+        let string = "";
+        const header = "Word | Count | Prime";
+        for (let i = 0; i < arrayOfWords.length; i++) {
             const element = arrayOfWords[i];
         string += `${element.word} | ${element.count} | ${element.prime}\n`
         }
@@ -21,8 +21,8 @@ var controller = (function(){
     };
 
     return {
-        init: function(insertedBook){
-            var book = new Book
+        init(insertedBook){
+            const book = new Book
             book.readBook(insertedBook);
             book.removePunct();
             book.removeCap();
@@ -30,7 +30,7 @@ var controller = (function(){
             book.splitWords();
             book.removeDup();
             checkPrimes(book.countWords());
-            var finalOutput = output(book.wordsArray);
+            const finalOutput = output(book.wordsArray);
             console.log(finalOutput);
             return finalOutput;
             }
