@@ -81,8 +81,9 @@ I had a lot of ideas about what pattern to use and in the end settled for the pr
 I wanted there to be a Book object which had functions that would turn the .txt document into a string and an array.  
 I then sort to create a Word object which would have a word, count and prime property which would make iterating through the array and outputting the values straightforward and useful for later changes as it would have all the data needed already in JSON format.
 I also wanted there to be a controller to control the outputting of data and to encapsulate some of the data using an IIFE. 
-
 Once I'd mapped out these ideas I started to right my tests and implement.
+
+In the book module I could have taken the formatting behaviour out and put it into it's own module; the formatting behaviour could also have been handled in one line using a more complex regex, I decided against this for readability.
 
 All my functions have been tested using jasmine. I tried to be driven by testing first so I could implement my code in a better way and so I did.
 
@@ -90,7 +91,7 @@ All my functions have been tested using jasmine. I tried to be driven by testing
 
 - TDD used throughout
 - The app is fully functional and meets all specifications
-- DRY principles upheld
+- DRY principle upheld
 
 
 ## Things to change
