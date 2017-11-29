@@ -100,5 +100,7 @@ All my functions have been tested using jasmine. I tried to be driven by testing
 - Remove some behaviour from the Book module into another module.
 - More comprehensive testing of the creation of Word objects within functions.
 - Allow the app to work with books stored in urls. (http)
+- Use the inbuilt prompt module to make the app more user friendly.
 - Create a view using JSON 
 - Simplifying the app, I may have overcomplicated it.
+
