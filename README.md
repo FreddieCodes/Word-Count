@@ -95,7 +95,7 @@ All my functions have been tested using jasmine. I tried to be driven by testing
 
 
 ## Things to change
-- Further refactoring of modules and prototypes
+- Further refactoring of modules and prototypes (move some logic out of Book and into the controller)
 - Cut down the size of the countWords function
 - Remove some behaviour from the Book module into another module.
 - More comprehensive testing of the creation of Word objects within functions.
